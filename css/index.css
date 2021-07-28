@@ -1,0 +1,273 @@
+:root {
+    --dark-blue: #1919A6;
+    --yellow: #ffff00;
+    --black: #252525;
+    --red: #FD0000;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: var(--yellow);
+    background: var(--black);
+}
+
+/* ============== */
+/* TYPOGRAPHY */
+/* ============== */
+
+h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--yellow);
+    margin: .25rem 0 0 0;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: .25rem;;
+    margin-top: .5rem;
+}
+
+h2 span {
+    color: var(--red)
+}
+
+/* ============== */
+/* layout */
+/* ============== */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+    border:solid var(--yellow);
+}
+
+.grid div {
+    width: 11.428571429px;
+    height: 11.428571429px;   
+}
+
+/* ============== */
+/* START-SCREEN */
+/* ============== */
+
+.start-screen {
+    width: 50%;
+
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    text-align: center;
+    background: var(--yellow);
+    color: var(--black);
+    border: solid var(--black) 2px;
+    border-radius: 2%;
+
+}
+
+.start-screen-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: .25em;
+}
+
+.start-btn {
+    background: var(--black);
+    color: var(--yellow);
+    font-size: 1.25rem;
+    margin-bottom: .5em;
+    padding: .5em .75em;
+    letter-spacing: 2px;
+    border-radius: 5px;   
+
+}
+
+/* ============== */
+/* GAME-ELEMENTS */
+/* ============== */
+
+.pac-dot {
+    background-color: var(--yellow);
+    border: 4px solid var(--black);
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: #2121DE;
+}
+
+.power-pellet {
+    background-color: green;
+    border-radius: 7.5px;
+}
+
+/* ============== */
+/* PAC-MAN */
+/* ============== */
+
+.pacman-left {
+    background-image: url("../images/pacman-left.svg");
+    border-radius: 7.5px;
+    border: none;
+}
+
+.pacman-right {
+    background-image: url("../images/pacman-right.svg");
+    border-radius: 7.5px;
+    border: none;
+}
+
+.pacman-up {
+    background-image: url("../images/pacman-up.svg");
+    border-radius: 7.5px;
+    border: none;
+}
+
+.pacman-down {
+    background-image: url("../images/pacman-down.svg");
+    border-radius: 7.5px;
+    border: none;
+}
+
+/* ============== */
+/* GHOSTS */
+/* ============== */
+
+.blinky {
+    border: none;
+    background: var(--black);
+    background-image: url("../images/blinky.svg");
+
+}
+
+.pinky {
+    background: var(--black);
+    background-image: url("../images/pinky.svg");
+    border: none;
+}
+
+.inky {
+    background: var(--black);
+    background-image: url("../images/inky.svg");
+    border: none;
+}
+
+.clyde {
+    background: var(--black);
+    background-image: url("../images/clyde.svg");
+    border: none;
+}
+
+.scared-ghost {
+    background: var(--black);
+    background-image: url("../images/scared-ghost.svg");
+    border: none;
+}
+
+/* ============== */
+/* MOBILE-ARROWS */
+/* ============== */
+
+.mobile-arrows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5em;
+    padding-top: .5em;
+}
+
+.mobile-btn {
+    font-size: 1.25rem;
+    background: var(--yellow);
+    color: var(--dark-blue);
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.left-right {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: .25em 0;
+}
+
+
+
+            
+
+
+@media(min-width: 1000px) {
+
+    .container {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .mobile-arrows {
+        display: none;
+    }
+
+    .start-screen {
+        width: 20%;
+    }
+
+    .grid-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 740px;
+        height: 740px;
+        border: solid var(--black);
+    }
+    
+    .grid div {
+        width: 26.428571429px;
+        height: 26.428571429px;   
+    }
+
+    .pac-dot {
+        border: 10px solid var(--black);
+    }
+
+    .inky,
+    .blinky,
+    .pinky,
+    .clyde {
+        border: none;
+    }
+    
+}
+
